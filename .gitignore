@@ -1,4 +1,11 @@
-_site
 .sass-cache
 node_modules
 _drafts
+_includes
+_layouts
+assets
+_config.yml
+Gemfile
+Gemfile.lock
+index.html
+package.json
