@@ -28,5 +28,9 @@ compress_html:
 links:
   - title: Home
     url: /
+    
+# collections
+collections:
+    cards:
 
 exclude: ['package.json', 'src', 'node_modules', 'vendor']
