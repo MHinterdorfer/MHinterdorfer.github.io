@@ -20,4 +20,7 @@
             <a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
         </div>
     </div>
+	{% if jekyll.environment == 'development' %}
+		<a class="down" data-scroll href="#scroll"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg></a>
+	{% endif %}
 </header>
