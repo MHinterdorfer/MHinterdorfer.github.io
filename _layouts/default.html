@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-    <body>
-        {% include svg-icons.html %}
-        {% include header-default.html %}
-		<div id="scroll">
-		{% if jekyll.environment == 'development' %}
-			{% include page.html %}
-		{% endif %}
-		</div>
-		{% if jekyll.environment == 'development' %}
-			{% include footer.html %}
-		{% endif %}
-    </body>
+  {% include head/head.html %}
+  <body>
+    {% include head/svg-icons.html %} {% include head/header-default.html %}
+    <div id="content">
+      {% include pages/content.html %}
+    </div>
+    {% include footer/footer.html %}
+  </body>
 </html>
