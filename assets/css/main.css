@@ -1,4 +1,4 @@
-body {
+.content-body {
 	background: #D3D3D3;
 }
 
@@ -260,7 +260,7 @@ body {
 }
 
 .skills .skillset .level-title .level-label {
-  color: #ccd1d6;
+  color: #a1a5a8;
   font-size: 14px;
   font-weight: 400;
   font-family: "Lato", arial, sans-serif;
@@ -276,7 +276,7 @@ body {
 
 .skills .skillset .level-bar-inner {
   height: 15px;
-  background: #66cb8c;
+  background: #2e4874;
 }
 
 .skills .svg-inline--fa {
@@ -1890,7 +1890,6 @@ pre span {
 footer {
   background: #2e4874;
   padding: 1.563rem 0;
-  margin-top: 100px;
 }
 footer p,
 footer a {
