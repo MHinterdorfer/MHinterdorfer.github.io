@@ -228,7 +228,7 @@ h1,h2,h3,h4{
 	background:#fff;
 }
 .icons-home a:hover .icon{
-	fill:#0562dc
+	fill:#2e4874
 }
 .down{
 	position:absolute;
@@ -569,7 +569,7 @@ html,body{
 	text-align:center
 }
 .header-site .site-title{
-	font-size:2.55rem;
+	font-size:3.75rem;
 	line-height:1;
 	margin-top:-80px;
 	display:block;
@@ -577,7 +577,7 @@ html,body{
 @media only screen and (min-width:37.5rem){
 	.header-site .site-title{
 		margin-bottom:0;
-		font-size:4.75rem
+		font-size:6.25rem
 }
 }
 .header-site .site-description{
@@ -1267,7 +1267,7 @@ pre span{
 	font-size:1.875rem
 }
 footer{
-	background:#0562dc;
+	background:#2e4874;
 	padding:1.563rem 0;
 	margin-top:100px;
 }
