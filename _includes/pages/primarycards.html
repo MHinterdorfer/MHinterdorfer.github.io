@@ -1,1 +1,4 @@
 {% include content/about-me.html %}
+{% if jekyll.environment == 'development' %}
+    {% include content/education.html %}
+{% endif %}
