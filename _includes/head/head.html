@@ -1,57 +1,105 @@
 <head>
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
 
-	{% if jekyll.environment == 'production' %}
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133657961-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+  <!-- Github Calendar -->
+  <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+  />
 
-		  gtag('config', 'UA-133657961-1');
-		</script>
-	{% endif %}
+  {% if jekyll.environment == 'production' %}
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-133657961-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    gtag("config", "UA-133657961-1");
+  </script>
+  {% endif %}
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Social: Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@{{site.twitter_username}}">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    {% if page.image %}
-    <meta property="twitter:image:src" content="{{ site.url }}{{page.image }}">
-    {% else %}
-    <meta property="twitter:image:src" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
-    {% endif %}
+  <title>
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+  <meta
+    name="description"
+    content="{% if page.description %}{{
+      page.description | strip_html | strip_newlines | truncate: 160
+    }}{% else %}{{ site.description }}{% endif %}"
+  />
 
-    <!-- Social: Facebook / Open Graph -->
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}{{page.image }}">
-    {% else %}
-    <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
-    {% endif %}
-    <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:site_name" content="{{ site.title }}">
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@{{ site.twitter_username }}" />
+  <meta
+    name="twitter:title"
+    content="{% if page.title %}{{ page.title }}{% else %}{{
+      site.title
+    }}{% endif %}"
+  />
+  <meta
+    name="twitter:description"
+    content="{% if page.description %}{{
+      page.description | strip_html | strip_newlines | truncate: 160
+    }}{% else %}{{ site.description }}{% endif %}"
+  />
+  {% if page.image %}
+  <meta property="twitter:image:src" content="{{ site.url }}{{ page.image }}" />
+  {% else %} <meta property="twitter:image:src" content="{{
+    "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url
+  }}"> {% endif %}
 
-    <!-- Windows 8 Tile Icons -->
-    <meta name="application-name" content="{{site.username}} Blog">
-    <meta name="msapplication-TileColor" content="#0562DC">
-    <meta name="msapplication-square70x70logo" content="smalltile.png" />
-    <meta name="msapplication-square150x150logo" content="mediumtile.png" />
-    <meta name="msapplication-wide310x150logo" content="widetile.png" />
-    <meta name="msapplication-square310x310logo" content="largetile.png" />
-    <!-- Android Lolipop Theme Color -->
-    <meta name="theme-color" content="#0562DC">
+  <!-- Social: Facebook / Open Graph -->
+  <meta
+    property="og:url"
+    content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <meta
+    property="og:title"
+    content="{% if page.title %}{{ page.title }}{% else %}{{
+      site.title
+    }}{% endif %}"
+  />
+  {% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+  {% else %} <meta property="og:image" content="{{
+    "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url
+  }}"> {% endif %}
+  <meta
+    property="og:description"
+    content="{% if page.description %}{{
+      page.description | strip_html | strip_newlines | truncate: 160
+    }}{% else %}{{ site.description }}{% endif %}"
+  />
+  <meta property="og:site_name" content="{{ site.title }}" />
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <!-- Windows 8 Tile Icons -->
+  <meta name="application-name" content="{{ site.username }} Blog" />
+  <meta name="msapplication-TileColor" content="#0562DC" />
+  <meta name="msapplication-square70x70logo" content="smalltile.png" />
+  <meta name="msapplication-square150x150logo" content="mediumtile.png" />
+  <meta name="msapplication-wide310x150logo" content="widetile.png" />
+  <meta name="msapplication-square310x310logo" content="largetile.png" />
+  <!-- Android Lolipop Theme Color -->
+  <meta name="theme-color" content="#0562DC" />
+
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
 </head>
