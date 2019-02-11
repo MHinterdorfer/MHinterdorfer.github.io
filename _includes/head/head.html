@@ -2,6 +2,9 @@
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/assets/css/main.css" />
 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/assets/img/logo.png" type="image/png" />
+
   <!-- Github Calendar -->
   <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
   <link
@@ -74,7 +77,7 @@
   {% if page.image %}
   <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
   {% else %} <meta property="og:image" content="{{
-    "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url
+    "/assets/img/logo.png" | prepend: site.baseurl | prepend: site.url
   }}"> {% endif %}
   <meta
     property="og:description"
