@@ -371,6 +371,20 @@
   color: #5f6b77;
 }
 
+.badge-theme {
+  background: #3AAA64;
+  font-size: 12px;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
 /* Work Section */
 .experience .item {
   margin-bottom: 30px;
