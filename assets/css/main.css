@@ -1092,17 +1092,26 @@ body {
   text-align: center;
 }
 .header-site .site-title {
-  font-size: 3.75rem;
+  font-size: 3rem;
   line-height: 1;
   margin-top: -80px;
   display: block;
 }
+
 @media only screen and (min-width: 37.5rem) {
   .header-site .site-title {
     margin-bottom: 0;
-    font-size: 6.25rem;
+    font-size: 4.5rem;
   }
 }
+
+@media only screen and (min-width: 47.5rem) {
+  .header-site .site-title {
+    margin-bottom: 0;
+    font-size: 6rem;
+  }
+}
+
 .header-site .site-description {
   font-size: 1.25rem;
   display: block;
