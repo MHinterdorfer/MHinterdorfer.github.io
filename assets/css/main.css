@@ -1,17 +1,72 @@
-.iframe-slideshare-16x9 {
+.resume .button {
+  background-color: #2e4874;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #2e4874;
+  margin:auto;
+  width: 40%;
+}
+
+.resume .button:hover {
+  background-color: #2e4874;
+  color: white;
+}
+
+.resume .header {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #545e69;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.resume p{
+  text-align: center;
+  margin:40px;
+  font-size: 1.5rem;
+}
+
+.iframe-16x9 {
   padding-bottom: calc(56.25% + 38px);
   position: relative;
   width: 100%;
   height: 0;
 }
 
-.iframe-slideshare-16x9 iframe {
+.iframe-16x9 iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border:1px solid #CCC; 
+  border: 1px solid #ccc;
+}
+
+.iframe-portrait {
+  padding-bottom: calc(100% + 80px);
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+.iframe-portrait iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
 }
 
 .content-body {
@@ -812,9 +867,8 @@ a.slideButton,
   cursor: pointer;
   padding: 0.313rem;
   border-radius: 0.188rem;
-  background: #0558c6;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   fill: #fff;
 }
 .icon-search {
@@ -834,7 +888,7 @@ aside {
   padding: 2.5rem 0 0;
   top: 0;
   left: -15rem;
-  background: #3f3f3f;
+  background: #d3d3d3;
   z-index: 20;
   box-shadow: inset -10px -1px 15px -9px rgba(0, 0, 0, 0.5);
 }
@@ -844,8 +898,8 @@ aside h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 1.25rem;
-  color: #fff;
+  font-size: 1.5rem;
+  color: #545e69;
 }
 aside nav ul {
   padding: 0;
@@ -860,17 +914,20 @@ aside nav li a {
   padding: 1.25rem;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
-  color: #b3b3b1;
-  border-top: 1px solid #797979;
+  color: #545e69;
+  border-top: 1px solid #545e69;
+  font-size: 1.25rem;
 }
 aside nav li a:hover {
   color: #191918;
   background: #fff;
 }
-aside nav .feed {
-  border-bottom: 1px solid #797979;
+aside nav .last-element {
+  padding: 0;
+  border-top: 0px;
+  border-bottom: 1px solid #545e69;
 }
 aside.slide {
   left: 0;
@@ -2316,7 +2373,7 @@ Vertical Timeline
   margin-left: 4px;
 }
 
-.timeline .heading{
+.timeline .heading {
   text-align: center;
   margin-bottom: 5px;
 }
