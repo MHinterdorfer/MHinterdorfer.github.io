@@ -29,6 +29,8 @@ compress_html:
 links:
   - title: Home
     url: /
+  - title: Résumé
+    url: /resume.html#content
     
 # collections
 collections:
