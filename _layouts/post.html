@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% include head/head.html %}
+
+<body>
+    {% include head/svg-icons.html %}
+    {% include head/header-post.html %}
+    <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <article role="article" id="content" class="post-content" itemprop="articleBody">
+            {{ content }}
+        </article>
+
+    </section>
+
+    {%if environment == 'development' %}
+        {% include footer/share.html %}
+        {% include footer/author.html %}
+        {% include footer/comments.html %}
+    {%endif%}
+    {% include footer/footer.html %}
+</body>
+
+</html>

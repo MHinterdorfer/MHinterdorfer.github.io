@@ -31,6 +31,8 @@ links:
     url: /
   - title: Résumé
     url: /resume.html#content
+  - title: Blog
+    url: /blog.html
     
 # collections
 collections:
