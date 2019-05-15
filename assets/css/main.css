@@ -847,7 +847,7 @@ body {
 }
 a.slideButton,
 .dosearch {
-  position: absolute;
+  position: fixed;
   display: block;
   width: 40px;
   height: 40px;
@@ -870,6 +870,7 @@ a.slideButton,
   width: 3rem;
   height: 3rem;
   fill: #fff;
+  background: #2e4874;
 }
 .icon-search {
   width: 2.188rem;
